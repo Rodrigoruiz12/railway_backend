@@ -44,3 +44,14 @@ export const eliminarItemDelCarrito = (req, res) => {
         res.status(401).json({ message: error.message });
     }
 };
+
+
+export const checkout = (req, res) => {
+    try {
+        const usuarioId = obtenerUsuarioId(req);
+        const carritoVacio = servicioCarrito.vaciarCarrito(usuarioId);
+        res.json({ message: 'Compra realizada con éxito', cart: carritoVacio });
+    } catch (error) {
+        res.status(401).json({ message: error.message });
+    }
+};

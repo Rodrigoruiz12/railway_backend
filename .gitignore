@@ -1,0 +1,5 @@
+# Archivos de la IDE (IntelliJ IDEA)
+.idea/
+*.iml
+# Ignorar dependencias de Node
+/node_modules

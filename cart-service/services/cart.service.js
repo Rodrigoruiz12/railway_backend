@@ -33,3 +33,10 @@ export const eliminarItem = (usuarioId, productoId) => {
     carritos[usuarioId] = carrito.filter(item => item.id !== idNumerico);
     return carritos[usuarioId];
 };
+
+
+export const vaciarCarrito = (usuarioId) => {
+    // Simplemente asignamos un array vacío al usuario
+    carritos[usuarioId] = [];
+    return carritos[usuarioId];
+};
